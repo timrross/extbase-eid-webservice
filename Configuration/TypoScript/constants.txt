@@ -1,0 +1,19 @@
+
+plugin.tx_example {
+	view {
+		# cat=plugin.tx_example/file; type=string; label=Path to template root (BE)
+		templateRootPath = EXT:example/Resources/Private/Backend/Templates/
+		# cat=plugin.tx_example/file; type=string; label=Path to template partials (BE)
+		partialRootPath = EXT:example/Resources/Private/Backend/Partials/
+		# cat=plugin.tx_example/file; type=string; label=Path to template layouts (BE)
+		layoutRootPath = EXT:example/Resources/Private/Backend/Layouts/
+	}
+	persistence {
+		# cat=plugin.tx_example//a; type=string; label=Default storage PID
+		storagePid = 1
+        # cat=plugin.tx_example//a; type=string; label=Blog model storage PID
+        blogStoragePid = 1
+        # cat=plugin.tx_example//a; type=string; label=Post model storage PID
+        postStoragePid = 1
+	}
+}

@@ -1,0 +1,26 @@
+
+# Plugin configuration
+plugin.tx_example {
+    persistence {
+        storagePid = {$plugin.tx_example.persistence.storagePid}
+        classes {
+            Acme\Example\Domain\Model\Blog {
+                # cat=plugin.tx_example//a; type=string; label=Blog model new record storage PID
+                newRecordStoragePid = {$plugin.tx_example.persistence.blogStoragePid}
+            }
+            Acme\Example\Domain\Model\Post {
+                # cat=plugin.tx_example//a; type=string; label=Post model new record storage PID
+                newRecordStoragePid = {$plugin.tx_example.persistence.postStoragePid}
+            }
+        }
+    }
+    view {
+        templateRootPath = {$plugin.tx_example.view.templateRootPath}
+        partialRootPath = {$plugin.tx_example.view.partialRootPath}
+        layoutRootPath = {$plugin.tx_example.view.layoutRootPath}
+    }
+}
+
+
+# Module configuration
+module.tx_example < plugin.tx_example
